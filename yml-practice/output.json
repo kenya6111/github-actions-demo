@@ -42,5 +42,27 @@
   "data": {
     "init.sql": "CREATE TABLE users (\n  id SERIAL PRIMARY KEY,\n  name TEXT\n);\n"
   },
-  "text1": "これは1行目 これは2行目 これは3行目\n"
+  "text1": "これは1行目 これは2行目 これは3行目\n",
+  "a": null,
+  "b": null,
+  "c": null,
+  "spec": {
+    "replicas": 2,
+    "template": {
+      "spec": {
+        "containers": [
+          {
+            "name": "api",
+            "image": "example:latest",
+            "env": [
+              {
+                "name": "MESSAGE",
+                "value": "このサービスは内部APIです。 外部公開はされません。\n"
+              }
+            ]
+          }
+        ]
+      }
+    }
+  }
 }

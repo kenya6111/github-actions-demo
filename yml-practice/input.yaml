@@ -1,3 +1,4 @@
+# ⑧ インデントはスペースのみ（タブ禁止）
 key: value
 "aaaa": "bbbb"
 111: 11111
@@ -69,3 +70,24 @@ text1: >
   これは1行目
   これは2行目
   これは3行目
+
+# ⑪ null の書き方は3つ
+a: null
+b: ~
+c:
+
+spec:
+  replicas: 2
+  template:
+    spec:
+      containers:
+        - name: api
+          image: example:latest
+          env:
+            - name: MESSAGE
+              value: >
+                このサービスは内部APIです。
+                外部公開はされません。
+
+# > や | は「見た目の YAML と、実際の値（プログラムに渡される文字列）が違う」
+# ＝ YAML 側で “見やすさのために書いた改行を、内部表現に変換する” 仕組み。
