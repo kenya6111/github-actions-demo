@@ -1,0 +1,46 @@
+{
+  "111": 11111,
+  "key": "value",
+  "aaaa": "bbbb",
+  "special_chars": "special_chars:aa",
+  "aaa": "aaaa'a'",
+  "double quotes": "☺",
+  "array": [
+    "aaa",
+    "aaa"
+  ],
+  "object": {
+    "aaaa": "ffff",
+    "key": "value"
+  },
+  "json array": [
+    "aaaa",
+    "aaa",
+    "aaa"
+  ],
+  "aa": null,
+  "object2": {
+    "aaaa": "ffff",
+    "key": "value",
+    "aaaaa": {
+      "bbbb": "bbbb"
+    }
+  },
+  "object3": [
+    "a",
+    "b",
+    "c",
+    {
+      "aaa1": {
+        "aaa2": "aaa"
+      }
+    },
+    "a"
+  ],
+  "text": "これは1行目\nこれは2行目\nこれは3行目\n",
+  "run": "echo \"start testing\"\ngo mod tidy\ngo test ./...\necho \"done\"\n",
+  "data": {
+    "init.sql": "CREATE TABLE users (\n  id SERIAL PRIMARY KEY,\n  name TEXT\n);\n"
+  },
+  "text1": "これは1行目 これは2行目 これは3行目\n"
+}

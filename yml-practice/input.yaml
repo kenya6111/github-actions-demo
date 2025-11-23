@@ -1,0 +1,71 @@
+key: value
+"aaaa": "bbbb"
+111: 11111
+special_chars: special_chars:aa
+aaa: 'aaaa''a'''
+double quotes: "\u263A"
+
+array:
+  - aaa
+  - aaa
+
+
+object:
+  "aaaa": ffff
+  key: value
+
+json array: [aaaa,aaa,aaa]
+
+aa: null
+
+
+object2:
+  aaaa: ffff
+  key: value
+  aaaaa:
+    bbbb: bbbb
+
+
+
+
+object3:
+  - a
+  - b
+  - c
+  - aaa1:
+      aaa2: aaa
+  - a
+
+
+# - xxx → リスト（配列）
+# key: value → オブジェクトのプロパティ（マップ）
+# 👉 この理解で OK
+
+text: |
+  これは1行目
+  これは2行目
+  これは3行目
+# YAML の パイプ | は、「改行をそのまま保持する複数行文字列」 を作るための記号。
+
+
+run: |
+  echo "start testing"
+  go mod tidy
+  go test ./...
+  echo "done"
+
+
+data:
+  init.sql: |
+    CREATE TABLE users (
+      id SERIAL PRIMARY KEY,
+      name TEXT
+    );
+
+
+# >（折りたたみブロック）は、
+# “改行をスペースに畳んで、1 行のテキストとして扱いたい時” に使われる。
+text1: >
+  これは1行目
+  これは2行目
+  これは3行目
